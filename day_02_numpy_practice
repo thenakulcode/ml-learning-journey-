@@ -1,0 +1,45 @@
+import numpy as np
+
+# arr = np.array([1,2,3,4,5])
+# print(arr, type(arr))
+
+
+# arr2 = np.array([[12,3,4,4], [5,6,7,8]])
+# print(arr2.shape)
+
+
+
+# zeros_arr = np.zeros((2,3))
+# print(zeros_arr)
+
+
+# arr3 = np.full((2,4), 100)
+# print(arr3)
+
+
+a = np.array([[1,2,3]])
+b = np.array([[4,5,6]])
+ 
+# result = np.vstack((a,b))
+# print(result)
+
+concatented = np.concatenate((a,b),axis =0)
+print(concatented)
+
+
+import numpy as np
+import numpy.ma as ma
+
+# Create a normal NumPy array
+data = np.array([1, 2, -999, 4, 5])
+
+# Mask invalid values (-999 treated as missing data)
+masked_data = ma.masked_equal(data, -999)
+
+print("Original Data:", data)
+print("Masked Data:", masked_data)
+
+# Perform operations while ignoring masked values
+mean_value = masked_data.mean()
+print("Mean (ignoring masked values):", mean_value)
+
